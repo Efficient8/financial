@@ -47,4 +47,5 @@ sum_row = pd.DataFrame(
 df_with_sum = pd.concat([sum_row, df], ignore_index=True)
 
 # Display the static DataFrame
+# st.table(df_with_sum)
 st.dataframe(df_with_sum, use_container_width=True)
