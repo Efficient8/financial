@@ -36,6 +36,7 @@ df = pd.read_excel(book)
 # Ensure Purpose is string and Amount is numeric
 df["Purpose"] = df["Purpose"].astype(str)
 df["Amount"] = pd.to_numeric(df["Amount"], errors="coerce")
+df["Status"] = df["Status"].astype(str)
 
 # Calculate the total row
 sum_row = pd.DataFrame(
