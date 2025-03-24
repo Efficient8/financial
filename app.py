@@ -37,6 +37,10 @@ df = pd.read_excel(book)
 df["Purpose"] = df["Purpose"].astype(str)
 df["Amount"] = pd.to_numeric(df["Amount"], errors="coerce")
 
+total_amount = df["Amount"].sum()
+
+st.header(f":blue[Rs. {total_amount}]")
+
 # Calculate the total row
 sum_row = pd.DataFrame(
     [["Total", df["Amount"].sum()]],
